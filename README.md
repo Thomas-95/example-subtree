@@ -74,4 +74,16 @@ ___
 3. Add and commit these changes.
 4. Run `$ git push myapp_remote myapp_branch`
 5. You will see that a new branch has been made at Thomas-95/myapp called `myapp_branch` which contains the changes made.
+6. Instead push the changes to `myapp_remote/master` using `$ git push myapp_remote HEAD:master`
+7. Checkout project's `master` branch: `$ git checkout master`
+8. Merge the changes to `myapp_remote/master` into `master`:
 
+```
+$ git merge --squash -s subtree --no-commit myapp_branch
+```
+9. Add all the changes with `$ git add .` then commit & push them.
+
+___
+
+#TODO - Check commands 8. and 9. above are the desired ones.
+___
