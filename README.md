@@ -28,7 +28,7 @@ origin
 7. Set root of `myapp` application to a myapp_branch using:
 
 ```
-$ git checkout -b myapp_\branch myapp\_remote/master
+$ git checkout -b myapp_branch myapp_remote/master
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;You now have both the project and the app at `master` and `myapp_branch`, respectively.
@@ -64,4 +64,14 @@ ___
 
 #TODO - Add code snippets illustrating how reverse commits can be made.
 
+___
+
+
+## Example usage
+
+1. Checkout `myapp_branch`
+2. Make changes to `models.py`
+3. Add and commit these changes.
+4. Run `$ git push myapp_remote myapp_branch`
+5. You will see that a new branch has been made at Thomas-95/myapp called `myapp_branch` which contains the changes made.
 
