@@ -68,13 +68,21 @@ $ git checkout master
 $ git merge --squash -s subtree --no-commit myapp_branch
 ```
 
+___
+#TODO - Check that `$ git subtree pull --prefix=myapp_subtree/ --squash myapp_remote master` wouldn't be better.
+___
+
 The reverse can also be done; make changes in the `\myapp` subdirectory of the master branch then merge them into your `myapp_branch` to push them upstream.
 
-___
+```
+$ git subtree push -P myapp_subtree/ myapp_remote test-using-subtree-push
+```
 
-#TODO - Add code snippets illustrating how reverse commits can be made.
+This will take *every* commit which touched the subtree and push them to a new branch `test-using-subtree-push`. The changes can then be merged into its master branch in the repo itself.
 
-___
+[This](https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec) article suggests the push can be done manually with `$ git cherry-pick`. May be useful to note later on.
+
+
 
 
 ## Example usage
