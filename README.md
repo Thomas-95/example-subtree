@@ -42,6 +42,16 @@ git read-tree --prefix=myapp/ -u myapp_branch
 
 &nbsp;&nbsp;&nbsp;&nbsp; Your project-level directory should now contain the `myapp` application, complete with its independent git repo and history.
 
+___
+
+#TODO - Check that the below is not, in fact, the correct way to do this:
+
+`$ git subtree git subtree add --prefix=myapp/ dc9c11fc35ce10db866514c2c4a4437cbf8cadd3`
+
+where the code is that of the subtree master's latest commit. Try merging changes onto this instead of read-tree.
+___
+
+
 ## Handling changes
 
 Update changes within in the `myapp` repo at a project level using:
